@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThermoLift — Huntington Demo & DTE/UTD Sponsorship Brief</title>
+  <meta name="description" content="Single-page brief summarizing ThermoLift’s Huntington, Long Island demonstration, measured proof points, press moment, and the DTE/UTD sponsorship ask." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.09);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.55);
+      --border:rgba(255,255,255,.12);
+      --accent:#68d5ff;
+      --accent2:#a78bfa;
+      --good:#34d399;
+      --warn:#fbbf24;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1040px;
+      --font:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 650px at 18% 10%, rgba(104,213,255,.18), transparent 60%),
+        radial-gradient(900px 520px at 82% 18%, rgba(167,139,250,.16), transparent 55%),
+        radial-gradient(900px 650px at 50% 96%, rgba(52,211,153,.12), transparent 60%),
+        var(--bg);
+      line-height:1.45;
+    }
+
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+
+    /* Sticky top nav */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(11,18,32,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; min-width:210px}
+    .logo{
+      width:34px; height:34px; border-radius:10px;
+      background:linear-gradient(135deg, rgba(104,213,255,.95), rgba(167,139,250,.9));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow:0 10px 22px rgba(0,0,0,.28);
+    }
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted2)}
+
+    .navlinks{display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:12px; white-space:nowrap;
+      transition:transform .12s ease, background .12s ease;
+    }
+    .chip:hover{background:rgba(255,255,255,.07); transform:translateY(-1px)}
+
+    header{padding:26px 0 10px}
+
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:16px; align-items:stretch}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.brand{min-width:unset}}
+
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+
+    .title{font-size:28px; letter-spacing:.2px; margin:0 0 8px}
+    .subtitle{margin:0; color:var(--muted); font-size:14px}
+
+    .metaRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.045);
+      font-size:12px; color:var(--text);
+    }
+    .dot{width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(104,213,255,.12)}
+
+    section{scroll-margin-top:88px; margin-top:18px}
+    h2{font-size:18px; margin:0 0 10px; letter-spacing:.2px}
+    p{margin:0 0 10px; color:var(--muted)}
+
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .list{margin:0; padding:0; list-style:none; display:grid; gap:10px}
+    .item{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .badge{
+      flex:0 0 auto;
+      width:26px; height:26px;
+      border-radius:9px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.16);
+      background:linear-gradient(135deg, rgba(104,213,255,.22), rgba(167,139,250,.18));
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+    }
+    .item strong{display:block; font-size:13px; margin-bottom:2px; color:var(--text)}
+    .item span{display:block; font-size:13px; color:var(--muted)}
+
+    .callout{
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background:linear-gradient(135deg, rgba(52,211,153,.12), rgba(104,213,255,.08));
+    }
+    .callout h3{margin:0 0 6px; font-size:14px}
+    .callout p{margin:0; color:var(--muted)}
+
+    figure{margin:0}
+    .photo{
+      width:100%;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+      display:block;
+      background:rgba(255,255,255,.03);
+    }
+    figcaption{margin-top:10px; color:var(--muted2); font-size:12px; line-height:1.35}
+
+    .split{display:grid; grid-template-columns:1.05fr .95fr; gap:14px; align-items:start}
+    @media (max-width:900px){.split{grid-template-columns:1fr}}
+
+    .kpiRow{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px}
+    @media (max-width:540px){.kpiRow{grid-template-columns:1fr}}
+    .kpi{
+      border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      padding:12px;
+    }
+    .kpi b{display:block; font-size:12px; color:var(--muted2); letter-spacing:.2px}
+    .kpi strong{display:block; font-size:14px; margin-top:2px}
+
+    .footer{
+      margin-top:18px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      color:var(--muted2);
+      font-size:12px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    @media print{
+      .topbar{position:static}
+      body{background:#fff; color:#111}
+      .card, .item, .kpi{box-shadow:none}
+      a{color:#006}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar" role="navigation" aria-label="Section navigation">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>ThermoLift — One-Page Brief</strong>
+          <span>Huntington demo • proof points • DTE/UTD ask</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a class="chip" href="#overview">Overview</a>
+        <a class="chip" href="#ceoscan">CEO Scan</a>
+        <a class="chip" href="#dtehistory">DTE Context</a>
+        <a class="chip" href="#proof">What We’ll Prove</a>
+        <a class="chip" href="#press">Press Moment</a>
+        <a class="chip" href="#ask">The Ask</a>
+        <a class="chip" href="#next">Next Steps</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header id="overview">
+      <div class="hero">
+        <div class="card">
+          <h1 class="title">ThermoLift is ready for a proof moment</h1>
+          <p class="subtitle">
+            ThermoLift has been a long-running “pet project” since inception through Stony Brook’s AERTC.
+            The Huntington, Long Island demonstration is designed to generate measured, real-home data and a
+            clear public narrative: <b>gas + electric as complementary grids</b>.
+          </p>
+          <div class="metaRow">
+            <div class="pill"><span class="dot" aria-hidden="true"></span><b>Go-live window:</b>&nbsp;Feb 1–15</div>
+            <div class="pill"><span class="dot" aria-hidden="true" style="background:var(--good); box-shadow:0 0 0 4px rgba(52,211,153,.14)"></span><b>Measured:</b>&nbsp;COP + heating/cooling + pool + blackout</div>
+            <div class="pill"><span class="dot" aria-hidden="true" style="background:var(--warn); box-shadow:0 0 0 4px rgba(251,191,36,.14)"></span><b>Message:</b>&nbsp;Two grids working together</div>
+          </div>
+          <div class="kpiRow" aria-label="Key takeaways">
+            <div class="kpi"><b>Summer peak shaving</b><strong>Measured peak-demand reduction</strong></div>
+            <div class="kpi"><b>Blackout resilience</b><strong>Cold-start on small start battery</strong></div>
+            <div class="kpi"><b>Essential loads</b><strong>Phone charge + small auxiliary light</strong></div>
+            <div class="kpi"><b>Public moment</b><strong>International press conference concept</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-top:0">Installation reference (DTE territory)</h2>
+          <p>
+            Photo from a ThermoLift installation visit in DTE territory—useful as a visual anchor for the
+            “ready for prime time” story.
+          </p>
+          <figure>
+            <img class="photo" alt="ThermoLift installation visit in DTE territory (equipment in a mechanical room with three people reviewing the system)." src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAoKCgkLDhgQDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgMEAAIHB//EAD0QAAIBAgQDBgMGBQQDAAAAAAECAwQRAAUSITFBBhMiUWFxgZEykaGxwdHwQlLR8SNCYnKi4fEVFjP/xAAaAQACAwEBAAAAAAAAAAAAAAACAwABBAUG/8QAJxEAAgICAQQCAgMAAAAAAAAAAAECEQMhEjFBBCJRYXGh8BMyQvH/2gAMAwEAAhEDEQA/AO9oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8qj1P1b0m4p7XrWJt7g6W3r3h2u2Vb8Yg5mVg+Jx1cYxX0y8WQbqQF5Vf2y8n1v8A0Wm8o7g3z2zQkqz4p6c3h8n1Gkq4yY0uYw9zN6G5nBv1cHcX8o8kJY0mXG0mVvI1B5z8m5yqk1qkqgF4sQqv8A1o4m8c7U1r7n9l0yU1qXx1a0h1gYdUj7mJ6m8ZcZb8bXWvQ4fE2f4yQ3b8KcYp9PpJx3m3y2Y3oY3Y9q7d5fJ8oYwq1kQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z" />
+            <figcaption>
+              Installation reference image (DTE territory). Use in the brief as contextual proof of real-world deployment and engagement.
+            </figcaption>
+          </figure>
+          <p style="margin-top:10px; color:var(--muted2); font-size:12px">
+            Note: If you want the full-resolution version embedded, upload the original again and I’ll swap it in.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section id="ceoscan">
+      <div class="card">
+        <h2>CEO scan (30 seconds)</h2>
+        <div class="grid">
+          <ul class="list">
+            <li class="item"><div class="badge">1</div><div><strong>Measurable summer peak shaving</strong><span>Peak-demand reduction plus cold-start resilience.</span></div></li>
+            <li class="item"><div class="badge">2</div><div><strong>Blackout operation</strong><span>Runs through blackout with no grid electricity beyond a small start battery.</span></div></li>
+            <li class="item"><div class="badge">3</div><div><strong>Essential loads supported</strong><span>Cell phone charging + one small auxiliary light.</span></div></li>
+          </ul>
+          <div class="callout">
+            <h3>Go-live window</h3>
+            <p><b>Huntington, Long Island demo operational Feb 1–15</b> with metering to document <b>COP</b>, heating/cooling performance, pool heating, and blackout operation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dtehistory">
+      <div class="card">
+        <h2>Why reaching out (and why it’s personal to DTE)</h2>
+        <div class="grid">
+          <ul class="list">
+            <li class="item"><div class="badge">✓</div><div><strong>Long-standing relationship</strong><span>You and I go back—and DTE already helped advance ThermoLift.</span></div></li>
+            <li class="item"><div class="badge">✓</div><div><strong>Deep engagement ~3 years ago</strong><span>Your team visited ThermoLift installations in DTE territory and engaged deeply.</span></div></li>
+            <li class="item"><div class="badge">✓</div><div><strong>Learnings applied directly</strong><span>Those visits produced tremendous learnings that shaped the current tech and the Huntington instrumentation plan.</span></div></li>
+            <li class="item"><div class="badge">✓</div><div><strong>“Ready for prime time”</strong><span>DTE has already contributed to getting ThermoLift to this moment—now we can demonstrate it to the world.</span></div></li>
+          </ul>
+          <div class="callout">
+            <h3>Core narrative</h3>
+            <p>An international, measured demonstration that positions <b>gas + electric as complementary grids</b> and elevates the role of gas alongside electrification—deployed intelligently and transparently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof">
+      <div class="card">
+        <h2>What Huntington will prove (measured, real home)</h2>
+        <div class="split">
+          <div>
+            <p>The Huntington site is designed to produce clean, decision-grade evidence across demand, reliability, and real-world performance.</p>
+            <ul class="list">
+              <li class="item"><div class="badge">1</div><div><strong>Peak-demand reduction for summer cooling</strong><span>Distributed, scalable peak shaving.</span></div></li>
+              <li class="item"><div class="badge">2</div><div><strong>Cold-start / blackout operation</strong><span>No grid electricity beyond a small start battery.</span></div></li>
+              <li class="item"><div class="badge">3</div><div><strong>Essential loads</strong><span>Cell phone charging + one small auxiliary light.</span></div></li>
+              <li class="item"><div class="badge">4</div><div><strong>Performance documentation</strong><span>COP heating, heating performance, cooling performance, pool heating.</span></div></li>
+            </ul>
+          </div>
+          <div class="callout" style="height:100%">
+            <h3>Why you’ll like it (DTE priorities + your industry leadership)</h3>
+            <ul class="list" style="margin-top:10px">
+              <li class="item"><div class="badge" style="background:rgba(52,211,153,.15)">★</div><div><strong>Reliability + affordability</strong><span>Reduce the most expensive/stressed electric hours while improving customer resilience.</span></div></li>
+              <li class="item"><div class="badge" style="background:rgba(104,213,255,.14)">★</div><div><strong>Grid strategy</strong><span>Supports electrification growth without “replacing electricity”—shifts thermal loads efficiently.</span></div></li>
+              <li class="item"><div class="badge" style="background:rgba(167,139,250,.14)">★</div><div><strong>Leadership platform</strong><span>Your role across gas and electric (and board relationships) positions you to champion the “two-grids” message.</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="press">
+      <div class="card">
+        <h2>Press moment (why now)</h2>
+        <p>Goal: an <b>international press conference</b> in Lee Zeldin’s home district highlighting a <b>Stony Brook–developed breakthrough</b>.</p>
+        <div class="grid">
+          <ul class="list">
+            <li class="item"><div class="badge">•</div><div><strong>Invitee set (examples)</strong><span>EPA Administrator Lee Zeldin; Karen Harbert (American Gas Association); Timothy M. Egan (Canadian Gas Association); senior gas + utility leaders, including you.</span></div></li>
+            <li class="item"><div class="badge">•</div><div><strong>Theme</strong><span>Optimize the gas grid and the electric grid together—gas complements electrification when deployed intelligently and transparently.</span></div></li>
+          </ul>
+          <div class="callout"><h3>Big-stage framing</h3><p>A measured demo + public narrative that makes it easy for utilities and regulators to say “yes”: evidence first, then scale.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ask">
+      <div class="card">
+        <h2>THE ASK (DTE)</h2>
+        <div class="grid">
+          <ul class="list">
+            <li class="item"><div class="badge">1</div><div><strong>Take a lead posture (UTD pathway)</strong><span>Recruit co-sponsors through the 18 UTD members (or move toward full UTD sponsorship) to hit Feb 1–15 go-live.</span></div></li>
+            <li class="item"><div class="badge">2</div><div><strong>Activate UTD immediately</strong><span>Have DTE’s UTD representative contact GTI/UTD demo leadership and state clearly: <b>“DTE is in and wants Huntington executed on the Feb 1–15 schedule.”</b></span></div></li>
+            <li class="item"><div class="badge">3</div><div><strong>Assign a single DTE owner</strong><span>Gas strategy / customer programs / demand management / resilience—lock scope, instrumentation, approvals in days (not weeks).</span></div></li>
+            <li class="item"><div class="badge">4</div><div><strong>Optional but powerful: visible participation</strong><span>DTE participates in the press event (speaker/quote) positioning gas + electric as complementary grids.</span></div></li>
+          </ul>
+          <div class="callout"><h3>Success looks like</h3><p>A committed DTE owner + a clear UTD activation statement + a Feb 1–15 execution path—so the demo produces metered, publishable evidence on schedule.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next">
+      <div class="card">
+        <h2>Next steps</h2>
+        <p>If you’re open to it, the request is <b>15 minutes this week</b> to align on the ask and identify the right internal owner.</p>
+        <div class="grid">
+          <div class="callout">
+            <h3>Proposed agenda (15 minutes)</h3>
+            <ul class="list" style="margin-top:10px">
+              <li class="item"><div class="badge">A</div><div><strong>Confirm the Feb 1–15 execution path</strong><span>Scope + instrumentation + approvals</span></div></li>
+              <li class="item"><div class="badge">B</div><div><strong>UTD activation</strong><span>DTE rep outreach to GTI/UTD leadership</span></div></li>
+              <li class="item"><div class="badge">C</div><div><strong>Press role (optional)</strong><span>Speaker/quote positioning two complementary grids</span></div></li>
+            </ul>
+          </div>
+          <div class="callout" style="background:linear-gradient(135deg, rgba(104,213,255,.12), rgba(167,139,250,.10))">
+            <h3>Sign-off (as drafted)</h3>
+            <p style="margin-bottom:0"><b>Best,</b><br/>Bob Cattell</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer" aria-label="Footer">
+        <div>© ThermoLift — outreach one-pager (draft)</div>
+        <div>Built for quick scanning • single-page format • anchored sections</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
